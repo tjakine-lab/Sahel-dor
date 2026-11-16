@@ -13,11 +13,16 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Sahel d'Or — Huiles naturelles du Sahel">
   <meta property="og:description" content="Neem, ricin, sésame : des huiles naturelles du Nord Cameroun. Commandez sur WhatsApp.">
-  <!-- À AJOUTER À LA MISE EN LIGNE : <meta property="og:image" content="https://ton-site/apercu.jpg"> -->
+  <meta property="og:url" content="https://sahel-dor.netlify.app/">
+  <meta property="og:image" content="https://sahel-dor.netlify.app/apercu.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20400%22%3E%3Ccircle%20cx%3D%22200%22%20cy%3D%22200%22%20r%3D%22196%22%20fill%3D%22%231f1a17%22/%3E%3Ccircle%20cx%3D%22200%22%20cy%3D%22200%22%20r%3D%22150%22%20fill%3D%22none%22%20stroke%3D%22%23d4a64a%22%20stroke-width%3D%2220%22/%3E%3Ccircle%20cx%3D%22200%22%20cy%3D%22200%22%20r%3D%22118%22%20fill%3D%22%23f6efe2%22/%3E%3Cpath%20d%3D%22M200%20100%20C%20250%20132%20258%20196%20200%20262%20C%20142%20196%20150%20132%20200%20100%20Z%22%20fill%3D%22%234f6b2a%22/%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     /* ============ VARIABLES : on change une couleur ici, tout le site suit ============ */
@@ -113,7 +118,7 @@
     .accroche h1 span { color: var(--or); }
     .accroche p { font-size: 1.1rem; max-width: 34ch; opacity: .95; margin: 0 0 26px; }
     .accroche .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .soleil { width: min(320px, 80%); margin-inline: auto; }
+    .soleil { width: min(320px, 80%); height: auto; margin-inline: auto; filter: drop-shadow(0 10px 24px rgba(0,0,0,.25)); }
 
     /* ============ SECTIONS ============ */
     section { padding: 64px 0; }
@@ -217,9 +222,12 @@
   <header class="entete">
     <div class="conteneur">
       <a href="#accueil" class="logo" aria-label="Sahel d'Or, retour en haut">
-        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
-          <circle cx="18" cy="18" r="17" fill="#e2a93b"/>
-          <path d="M18 7c4 6 7 10 7 14a7 7 0 0 1-14 0c0-4 3-8 7-14z" fill="#7a3b1d"/>
+        <svg width="40" height="40" viewBox="0 0 400 400" aria-hidden="true">
+          <circle cx="200" cy="200" r="196" fill="#1f1a17"/>
+          <circle cx="200" cy="200" r="150" fill="none" stroke="#d4a64a" stroke-width="16"/>
+          <circle cx="200" cy="200" r="118" fill="#f6efe2"/>
+          <path d="M200 100 C 250 132 258 196 200 262 C 142 196 150 132 200 100 Z" fill="#4f6b2a"/>
+          <path d="M200 116 V 252" stroke="#d4a64a" stroke-width="12" stroke-linecap="round"/>
         </svg>
         <strong>Sahel d'Or</strong>
       </a>
@@ -245,15 +253,31 @@
             <a href="#" class="btn btn-wa js-wa-general">Écrire sur WhatsApp</a>
           </div>
         </div>
-        <!-- Illustration en code (légère) : soleil, dunes, goutte d'huile -->
-        <svg class="soleil" viewBox="0 0 300 300" role="img" aria-label="Illustration : soleil du Sahel au-dessus des dunes et une goutte d'huile dorée">
-          <circle cx="150" cy="130" r="95" fill="#e2a93b" opacity=".9"/>
-          <circle cx="150" cy="130" r="118" fill="none" stroke="#e2a93b" stroke-width="3" stroke-dasharray="4 12" opacity=".7"/>
-          <path d="M0 230 Q75 190 150 225 T300 215 V300 H0z" fill="#c8782a"/>
-          <path d="M0 255 Q90 225 170 255 T300 250 V300 H0z" fill="#7a3b1d"/>
-          <path d="M150 70c22 32 36 52 36 72a36 36 0 0 1-72 0c0-20 14-40 36-72z" fill="#fbf4e6"/>
-          <path d="M150 92c13 20 21 32 21 44a21 21 0 0 1-42 0c0-12 8-24 21-44z" fill="#e2a93b"/>
-        </svg>
+        <!-- Logo Sahel d'Or (dessiné en code : net à toutes les tailles) -->
+        <svg class="soleil" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400" role="img" aria-label="Logo Sahel d'Or : badge noir et or avec une feuille de neem et des graines">
+  <defs>
+    <path id="arcHaut" d="M 62 200 A 138 138 0 0 1 338 200"/>
+    <path id="arcBas" d="M 52 200 A 148 148 0 0 0 348 200"/>
+  </defs>
+  <circle cx="200" cy="200" r="196" fill="#1f1a17"/>
+  <circle cx="200" cy="200" r="184" fill="none" stroke="#d4a64a" stroke-width="2.5"/>
+  <circle cx="200" cy="200" r="114" fill="none" stroke="#d4a64a" stroke-width="2.5"/>
+  <circle cx="200" cy="200" r="106" fill="#f6efe2"/>
+  <path d="M 34 200 l 8 -8 l 8 8 l -8 8 z" fill="#d4a64a"/>
+  <path d="M 350 200 l 8 -8 l 8 8 l -8 8 z" fill="#d4a64a"/>
+  <path d="M200 112 C 244 140 250 196 200 254 C 150 196 156 140 200 112 Z" fill="#4f6b2a"/>
+  <path d="M200 124 V 246" stroke="#d4a64a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M200 162 L 224 144 M200 188 L 230 168 M200 214 L 224 198 M200 162 L 176 144 M200 188 L 170 168 M200 214 L 176 198" stroke="#d4a64a" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="170" cy="274" rx="10" ry="6" fill="#a4521f" transform="rotate(-25 170 274)"/>
+  <ellipse cx="200" cy="282" rx="10" ry="6" fill="#d4a64a"/>
+  <ellipse cx="230" cy="274" rx="10" ry="6" fill="#a4521f" transform="rotate(25 230 274)"/>
+  <text font-family="Fraunces" font-weight="800" font-size="38" fill="#d4a64a" letter-spacing="4">
+    <textPath href="#arcHaut" xlink:href="#arcHaut" startOffset="50%" text-anchor="middle">SAHEL D'OR</textPath>
+  </text>
+  <text font-family="Nunito Sans" font-weight="800" font-size="16" fill="#d4a64a" letter-spacing="4" dominant-baseline="hanging">
+    <textPath href="#arcBas" xlink:href="#arcBas" startOffset="50%" text-anchor="middle">NATUREL · NORD CAMEROUN</textPath>
+  </text>
+</svg>
       </div>
     </section>
     <div class="motif" aria-hidden="true"></div>
@@ -353,16 +377,16 @@
 
     const PRODUITS = [
       // image : nom du fichier photo, déposé à côté de index.html
-      { nom: "Huile de neem",      format: "Bouteille 1 L", prix: 10000, couleur: "#4f6b2a", image: "huile-neem.webp",
+      { nom: "Huile de neem",      format: "Bouteille 1 L", prix: 10000, couleur: "#4f6b2a", image: "IMG_6191.webp",
         usages: ["Peau", "Cheveux", "Plantes"] },
-      { nom: "Huile de ricin",     format: "Bouteille 1 L", prix: 10000, couleur: "#c8782a", image: "huile-ricin.webp",
+      { nom: "Huile de ricin",     format: "Bouteille 1 L", prix: 10000, couleur: "#c8782a", image: "IMG_6192.webp",
         usages: ["Pousse des cheveux", "Cils", "Peau sèche"] },
-      { nom: "Huile de sésame",    format: "Bouteille 1 L", prix: 5000,  couleur: "#e2a93b", image: "huile-sesame.webp",
+      { nom: "Huile de sésame",    format: "Bouteille 1 L", prix: 5000,  couleur: "#e2a93b", image: "IMG_6193.webp",
         usages: ["Cuisine", "Massage", "Peau"] },
-      { nom: "Graines de sésame",  format: "Sachet 1 kg",   prix: 3000,  couleur: "#d9b77a", image: "graines-sesame.webp",
+      { nom: "Graines de sésame",  format: "Sachet 1 kg",   prix: 3000,  couleur: "#d9b77a", image: "IMG_6194.webp",
         usages: ["Cuisine", "Pâtisserie"], graines: true },
       // Astuce : prix: null affiche « Prix sur demande »
-      { nom: "Beurre de karité",   format: "1 L",           prix: 3000,  couleur: "#f1e2c4", image: "beurre-karite.webp",
+      { nom: "Beurre de karité",   format: "1 L",           prix: 3000,  couleur: "#f1e2c4", image: "IMG_6195.webp",
         usages: ["Peau", "Cheveux", "Lèvres"], pot: true }
     ];
 

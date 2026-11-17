@@ -6,15 +6,15 @@
 
   <!-- ============ RÉFÉRENCEMENT (SEO) ============ -->
   <title>Sahel d'Or — Huiles naturelles du Sahel : neem, ricin, sésame</title>
-  <meta name="description" content="Huiles naturelles du Nord Cameroun : huile de neem, huile de ricin, huile de sésame, beurre de karité et graines de sésame. Commande sur WhatsApp, expédition partout au Cameroun.">
+  <meta name="description" content="Huiles naturelles du Nord Cameroun : huile de neem, huile de ricin, huile de sésame, beurre de karité, graines de sésame et fleurs d'hibiscus (bissap). Commande sur WhatsApp, expédition partout au Cameroun.">
   <meta name="theme-color" content="#7a3b1d">
 
   <!-- Aperçu quand on partage le lien sur WhatsApp / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Sahel d'Or — Huiles naturelles du Sahel">
   <meta property="og:description" content="Neem, ricin, sésame : des huiles naturelles du Nord Cameroun. Commandez sur WhatsApp.">
-  <meta property="og:url" content="https://sahel-dor.netlify.app/">
-  <meta property="og:image" content="https://sahel-dor.netlify.app/apercu.jpg">
+  <meta property="og:url" content="https://saheldor.vercel.app/">
+  <meta property="og:image" content="https://saheldor.vercel.app/apercu.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -247,7 +247,7 @@
         <div>
           <span class="etiquette">NATUREL · NORD CAMEROUN</span>
           <h1>Les <span>trésors naturels</span> du Sahel, chez vous.</h1>
-          <p>Huiles de neem, de ricin et de sésame, beurre de karité : des produits de l'Extrême-Nord, expédiés partout au Cameroun.</p>
+          <p>Huiles de neem, de ricin et de sésame, beurre de karité, fleurs d'hibiscus : des produits de l'Extrême-Nord, expédiés partout au Cameroun.</p>
           <div class="actions">
             <a href="#produits" class="btn btn-or">Voir les produits</a>
             <a href="#" class="btn btn-wa js-wa-general">Écrire sur WhatsApp</a>
@@ -287,7 +287,7 @@
       <div class="conteneur">
         <div class="intro-section">
           <h2>Nos produits</h2>
-          <p>Choisissez la quantité, puis commandez en un clic sur WhatsApp.</p>
+          <p>Tous nos produits sont préparés sur commande. Choisissez la quantité, puis commandez en un clic sur WhatsApp.</p>
         </div>
         <div class="grille" id="grille-produits"></div>
       </div>
@@ -317,9 +317,9 @@
         <ol class="etapes">
           <li><strong>Choisissez</strong><span>votre produit et la quantité.</span></li>
           <li><strong>Envoyez</strong><span>le message WhatsApp déjà rempli.</span></li>
-          <li><strong>Recevez</strong><span>la confirmation, payez par MTN Mobile Money ou Orange Money, et votre colis est expédié.</span></li>
+          <li><strong>Recevez</strong><span>la confirmation et le délai, payez par MTN Mobile Money ou Orange Money : votre commande est préparée puis expédiée.</span></li>
         </ol>
-        <p class="infos-pratiques"><strong>Livraison partout au Cameroun</strong> par expédition. Les frais d'expédition sont à la charge du client.</p>
+        <p class="infos-pratiques"><strong>Préparé sur commande</strong> pour vous garantir des produits frais. <strong>Livraison partout au Cameroun</strong> par expédition. Les frais d'expédition sont à la charge du client.</p>
       </div>
     </section>
 
@@ -330,6 +330,10 @@
           <h2>Questions fréquentes</h2>
         </div>
         <div class="faq">
+          <details>
+            <summary>Pourquoi « préparé sur commande » ?</summary>
+            <p>Nous préparons chaque commande à la demande, pour vous envoyer des produits frais. Le délai de préparation vous est confirmé sur WhatsApp avant le paiement.</p>
+          </details>
           <details>
             <summary>Comment conserver les huiles ?</summary>
             <p>À l'abri de la lumière et de la chaleur, bouteille bien fermée. L'huile de neem peut se figer quand il fait frais : c'est normal, elle redevient liquide à température ambiante.</p>
@@ -385,6 +389,8 @@
         usages: ["Cuisine", "Massage", "Peau"] },
       { nom: "Graines de sésame",  format: "Sachet 1 kg",   prix: 3000,  couleur: "#d9b77a", image: "IMG_6194.webp",
         usages: ["Cuisine", "Pâtisserie"], graines: true },
+      { nom: "Fleurs d'hibiscus séchées", format: "Sachet 500 g", prix: 1000, couleur: "#9b1d3a",
+        usages: ["Bissap", "Infusion", "Jus frais"], fleur: true, image: "hibiscus.webp" },
       // Astuce : prix: null affiche « Prix sur demande »
       { nom: "Beurre de karité",   format: "1 L",           prix: 3000,  couleur: "#f1e2c4", image: "IMG_6195.webp",
         usages: ["Peau", "Cheveux", "Lèvres"], pot: true }
@@ -404,6 +410,10 @@
         const pos = [[90,70],[110,60],[130,72],[100,90],[122,92],[142,86],[80,95],[112,112],[134,108],[96,118],[150,104],[70,80]];
         pos.forEach(([x, y], i) => points += `<ellipse cx="${x}" cy="${y}" rx="7" ry="4" fill="#fbf4e6" transform="rotate(${i * 37} ${x} ${y})"/>`);
         return `<svg viewBox="0 0 220 170" width="220" height="170" aria-hidden="true"><path d="M60 60 Q110 20 160 60 L170 140 Q110 160 50 140z" fill="${p.couleur}"/>${points}</svg>`;
+      }
+      if (p.fleur) {
+        const petale = (a) => `<path d="M110 85 C 92 60 98 34 110 28 C 122 34 128 60 110 85 Z" fill="${p.couleur}" transform="rotate(${a} 110 85)"/>`;
+        return `<svg viewBox="0 0 220 170" width="220" height="170" aria-hidden="true">${[0,72,144,216,288].map(petale).join("")}<circle cx="110" cy="85" r="12" fill="#e2a93b"/><path d="M110 85 L 110 60" stroke="#fbf4e6" stroke-width="3" stroke-linecap="round"/><path d="M40 150 q 70 -20 140 0" stroke="#7a3b1d" stroke-width="4" fill="none"/></svg>`;
       }
       if (p.pot) {
         return `<svg viewBox="0 0 220 170" width="220" height="170" aria-hidden="true"><rect x="70" y="50" width="80" height="20" rx="6" fill="#7a3b1d"/><rect x="64" y="68" width="92" height="78" rx="14" fill="${p.couleur}" stroke="#c8782a" stroke-width="3"/><path d="M80 95 h60 M80 110 h60" stroke="#c8782a" stroke-width="3" stroke-dasharray="6 6"/></svg>`;
@@ -434,7 +444,7 @@
           : `<div class="carte-visuel" style="background:${p.couleur}22">${visuel(p)}</div>`}
         <div class="carte-corps">
           <h3>${p.nom}</h3>
-          <span class="format">${p.format}</span>
+          <span class="format">${p.format} · Préparé sur commande</span>
           <ul class="usages" aria-label="Usages">${p.usages.map(u => `<li>${u}</li>`).join("")}</ul>
           <div class="prix">${p.prix ? formatPrix(p.prix) : "Prix sur demande"}</div>
           <div class="commande">

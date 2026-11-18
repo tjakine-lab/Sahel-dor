@@ -6,7 +6,7 @@
 
   <!-- ============ RÉFÉRENCEMENT (SEO) ============ -->
   <title>Sahel d'Or — Huiles naturelles du Sahel : neem, ricin, sésame</title>
-  <meta name="description" content="Huiles naturelles du Nord Cameroun : huile de neem, huile de ricin, huile de sésame, beurre de karité, graines de sésame et fleurs d'hibiscus (bissap). Commande sur WhatsApp, expédition partout au Cameroun.">
+  <meta name="description" content="Huiles naturelles du Nord Cameroun : huile de neem, huile de ricin, huile de sésame, beurre de karité, feuilles de neem, graines de sésame et fleurs d'hibiscus (bissap). Commande sur WhatsApp, expédition partout au Cameroun.">
   <meta name="theme-color" content="#7a3b1d">
 
   <!-- Aperçu quand on partage le lien sur WhatsApp / Facebook -->
@@ -155,6 +155,20 @@
     .total { margin-left: auto; color: var(--doux); font-size: .92rem; }
     .total strong { color: var(--encre); }
 
+    .courte { margin: 0; color: var(--doux); font-size: .95rem; }
+    .plus { box-shadow: none; background: var(--creme); border-radius: 12px; margin: 0; }
+    .plus summary { padding: 12px 14px; font-size: .95rem; color: var(--terre); }
+    .plus ul { margin: 0; padding: 0 14px 10px 32px; color: var(--doux); font-size: .92rem; }
+    .plus li { margin-bottom: 6px; }
+    .plus .alerte { margin: 0 14px 14px; padding: 8px 10px; border-radius: 8px; background: #9b1d1d; color: #fff; font-weight: 700; font-size: .85rem; }
+    .gros-ligne { text-align: center; margin: 28px auto 0; max-width: 620px; color: var(--doux); }
+    .gros { background: var(--encre); color: var(--sable); }
+    .gros .intro-section h2 { color: var(--or); }
+    .gros .intro-section p { color: var(--sable); }
+    .gros-liste { list-style: none; padding: 0; margin: 0 auto 28px; max-width: 620px; display: grid; gap: 12px; }
+    .gros-liste li { background: rgba(255,255,255,.07); border-left: 4px solid var(--or); border-radius: 10px; padding: 14px 16px; }
+    .gros .centre { text-align: center; }
+
     /* ============ POURQUOI NOUS ============ */
     .atouts { background: var(--sable); }
     .atouts-grille { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
@@ -179,6 +193,11 @@
     .etapes strong { display: block; }
     .etapes span { color: var(--doux); }
     .infos-pratiques { margin-top: 22px; text-align: center; color: var(--doux); }
+    .relais { margin: 22px auto 0; max-width: 640px; background: var(--blanc); border: 2px solid var(--or); border-radius: var(--rayon); padding: 22px; text-align: center; }
+    .relais h3 { font-size: 1.2rem; color: var(--terre); }
+    .relais p { margin: 6px 0; color: var(--doux); }
+    .relais p strong { color: var(--encre); }
+    .relais .autres { font-size: .92rem; margin-top: 12px; }
 
     /* ============ FAQ ============ */
     .faq { max-width: 720px; margin-inline: auto; }
@@ -233,6 +252,7 @@
       </a>
       <nav aria-label="Menu principal">
         <a href="#produits">Produits</a>
+        <a href="#gros">Vente en gros</a>
         <a href="#commander">Commander</a>
         <a href="#questions">Questions</a>
       </nav>
@@ -290,8 +310,27 @@
           <p>Tous nos produits sont préparés sur commande. Choisissez la quantité, puis commandez en un clic sur WhatsApp.</p>
         </div>
         <div class="grille" id="grille-produits"></div>
+        <p class="gros-ligne">Vous êtes revendeuse, salon de coiffure, boutique ou restaurant ? <strong>Prix dégressifs pour les commandes importantes.</strong> <a href="#gros">Voir la vente en gros</a></p>
       </div>
     </section>
+    <!-- ============ VENTE EN GROS ============ -->
+    <section id="gros" class="gros">
+      <div class="conteneur">
+        <div class="intro-section">
+          <h2>Achetez en gros, gagnez plus</h2>
+          <p>Plus la quantité est grande, plus le prix baisse.</p>
+        </div>
+        <ul class="gros-liste">
+          <li>Nous fournissons les revendeuses, salons de coiffure, boutiques et vendeuses de jus.</li>
+          <li>Livraison en vrac (bidons, sacs) possible : vous conditionnez à votre façon.</li>
+          <li>Tarif établi selon la quantité et la ville de livraison.</li>
+        </ul>
+        <div class="centre">
+          <a href="#" class="btn btn-wa js-wa-gros">Demander un tarif de gros sur WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
 
     <!-- ============ POURQUOI NOUS ============ -->
     <section class="atouts">
@@ -303,7 +342,7 @@
           <div class="atout"><h3>100 % naturel</h3><p>Des huiles sans parfum ni additif, tirées de graines du Sahel.</p></div>
           <div class="atout"><h3>Origine locale</h3><p>Des graines de l'Extrême-Nord du Cameroun, travaillées sur place.</p></div>
           <div class="atout"><h3>Partout au Cameroun</h3><p>Commande par WhatsApp, expédition dans toutes les villes.</p></div>
-          <div class="atout"><h3>MTN et Orange Money</h3><p>Vous payez par Mobile Money après confirmation de votre commande.</p></div>
+          <div class="atout"><h3>Payez à la réception</h3><p>Acompte de 50 % par MTN ou Orange Money, le reste quand vous recevez vos produits.</p></div>
         </div>
       </div>
     </section>
@@ -317,9 +356,16 @@
         <ol class="etapes">
           <li><strong>Choisissez</strong><span>votre produit et la quantité.</span></li>
           <li><strong>Envoyez</strong><span>le message WhatsApp déjà rempli.</span></li>
-          <li><strong>Recevez</strong><span>la confirmation et le délai, payez par MTN Mobile Money ou Orange Money : votre commande est préparée puis expédiée.</span></li>
+          <li><strong>Versez 50 %</strong><span>d'acompte par MTN Mobile Money ou Orange Money : votre commande est préparée et envoyée à notre relais.</span></li>
+          <li><strong>Recevez</strong><span>vos produits, puis payez les 50 % restants à la réception.</span></li>
         </ol>
-        <p class="infos-pratiques"><strong>Préparé sur commande</strong> pour vous garantir des produits frais. <strong>Livraison partout au Cameroun</strong> par expédition. Les frais d'expédition sont à la charge du client.</p>
+        <p class="infos-pratiques"><strong>Préparé sur commande</strong> pour vous garantir des produits frais.</p>
+        <div class="relais">
+          <h3>Livraison par nos relais</h3>
+          <p><strong>Yaoundé</strong> (chaque lundi) · <strong>Douala</strong> · <strong>Ebolowa</strong> · <strong>Bertoua</strong></p>
+          <p>Le jour de livraison et le mode de remise (chez le relais ou à votre domicile) vous sont confirmés sur WhatsApp.</p>
+          <p class="autres">Autres villes : expédition par agence de voyage, frais d'expédition à votre charge.</p>
+        </div>
       </div>
     </section>
 
@@ -332,11 +378,11 @@
         <div class="faq">
           <details>
             <summary>Pourquoi « préparé sur commande » ?</summary>
-            <p>Nous préparons chaque commande à la demande, pour vous envoyer des produits frais. Le délai de préparation vous est confirmé sur WhatsApp avant le paiement.</p>
+            <p>Nous préparons chaque commande à la demande, pour vous envoyer des produits frais. Le délai de préparation vous est confirmé sur WhatsApp avant le versement de l'acompte.</p>
           </details>
           <details>
             <summary>Comment conserver les huiles ?</summary>
-            <p>À l'abri de la lumière et de la chaleur, bouteille bien fermée. L'huile de neem peut se figer quand il fait frais : c'est normal, elle redevient liquide à température ambiante.</p>
+            <p>À l'abri de la lumière et de la chaleur, bouteille bien fermée. Il peut arriver, rarement, que l'huile de neem se fige quand il fait frais : c'est normal, elle redevient liquide à température ambiante.</p>
           </details>
           <details>
             <summary>Pourquoi l'huile de neem a-t-elle une odeur forte ?</summary>
@@ -344,11 +390,11 @@
           </details>
           <details>
             <summary>Comment se passe le paiement ?</summary>
-            <p>Après votre message, nous confirmons la disponibilité et le total, puis vous payez par MTN Mobile Money ou Orange Money.</p>
+            <p>Après votre message, nous confirmons la disponibilité et le total. Vous versez un acompte de 50 % par MTN Mobile Money ou Orange Money, puis vous payez le reste à la réception de vos produits, après les avoir vus.</p>
           </details>
           <details>
             <summary>Livrez-vous dans ma ville ?</summary>
-            <p>Oui, nous expédions partout au Cameroun. Indiquez votre ville dans votre message WhatsApp : nous vous confirmons l'agence d'expédition et le délai. Les frais d'expédition sont à votre charge.</p>
+            <p>Nous livrons par nos relais à Yaoundé (chaque lundi), Douala, Ebolowa et Bertoua, avec paiement du solde à la réception. Le jour et le mode de remise vous sont confirmés sur WhatsApp. Pour les autres villes, nous expédions par agence de voyage, avec des frais d'expédition à votre charge.</p>
           </details>
         </div>
       </div>
@@ -382,18 +428,37 @@
     const PRODUITS = [
       // image : nom du fichier photo, déposé à côté de index.html
       { nom: "Huile de neem",      format: "Bouteille 1 L", prix: 10000, couleur: "#4f6b2a", image: "IMG_6191.webp",
-        usages: ["Peau", "Cheveux", "Plantes"] },
+        usages: ["Peau", "Cheveux", "Plantes"] ,
+        courte: "Huile traditionnelle du Sahel, appréciée pour le soin de la peau et du cuir chevelu.",
+        details: ["Utilisée en soin de la peau et du cuir chevelu, mélangée à une autre huile.", "Protège naturellement les plantes contre les insectes.", "Son odeur prononcée est normale. Elle peut, rarement, se figer au frais : elle redevient liquide à température ambiante."],
+        alerte: "Usage externe, ne pas avaler. Déconseillée aux femmes enceintes et aux jeunes enfants." },
+      { nom: "Feuilles de neem séchées", format: "Sachet 100 g · Usage externe", prix: 500, couleur: "#4f6b2a",
+        usages: ["Bain", "Cheveux", "Plantes"], feuilles: true, image: "feuilles-neem.webp" ,
+        courte: "Feuilles séchées à l'ombre, pour vos soins traditionnels.",
+        details: ["En décoction, pour le bain ou le rinçage des cheveux.", "Placées dans les réserves de céréales, elles éloignent les insectes."],
+        alerte: "Usage externe. Déconseillées aux femmes enceintes et aux jeunes enfants." },
       { nom: "Huile de ricin",     format: "Bouteille 1 L", prix: 10000, couleur: "#c8782a", image: "IMG_6192.webp",
-        usages: ["Pousse des cheveux", "Cils", "Peau sèche"] },
+        usages: ["Pousse des cheveux", "Cils", "Peau sèche"] ,
+        courte: "Une huile épaisse, prisée pour nourrir les cheveux, les cils et les sourcils.",
+        details: ["Appliquée sur les pointes, les cils et les sourcils.", "Nourrit les peaux très sèches (coudes, talons)."],
+        alerte: "Usage externe, ne pas avaler." },
       { nom: "Huile de sésame",    format: "Bouteille 1 L", prix: 5000,  couleur: "#e2a93b", image: "IMG_6193.webp",
-        usages: ["Cuisine", "Massage", "Peau"] },
+        usages: ["Cuisine", "Massage", "Peau"] ,
+        courte: "Une huile douce au léger goût de noisette, pour la cuisine et le massage.",
+        details: ["En cuisine : sauces, fritures légères, assaisonnement.", "En massage, elle laisse la peau douce."] },
       { nom: "Graines de sésame",  format: "Sachet 1 kg",   prix: 3000,  couleur: "#d9b77a", image: "IMG_6194.webp",
-        usages: ["Cuisine", "Pâtisserie"], graines: true },
+        usages: ["Cuisine", "Pâtisserie"], graines: true ,
+        courte: "Des graines du Nord, pour parfumer vos plats.",
+        details: ["Dans les sauces, les beignets, le pain et les pâtisseries.", "Grillées, elles développent un goût plus intense."] },
       { nom: "Fleurs d'hibiscus séchées", format: "Sachet 500 g", prix: 1000, couleur: "#9b1d3a",
-        usages: ["Bissap", "Infusion", "Jus frais"], fleur: true, image: "hibiscus.webp" },
+        usages: ["Bissap", "Infusion", "Jus frais"], fleur: true, image: "hibiscus.webp" ,
+        courte: "Pour préparer votre bissap maison, frais ou chaud.",
+        details: ["Jus de bissap : infuser, filtrer, sucrer, ajouter menthe ou gingembre.", "En infusion chaude, à la belle couleur rouge naturelle."] },
       // Astuce : prix: null affiche « Prix sur demande »
       { nom: "Beurre de karité",   format: "1 L",           prix: 3000,  couleur: "#f1e2c4", image: "IMG_6195.webp",
-        usages: ["Peau", "Cheveux", "Lèvres"], pot: true }
+        usages: ["Peau", "Cheveux", "Lèvres"], pot: true ,
+        courte: "Le beurre du Sahel qui nourrit et protège la peau, les cheveux et les lèvres.",
+        details: ["Pour les peaux sèches, les mains, les talons et les lèvres.", "En soin des cheveux, il nourrit et facilite le coiffage.", "Il fond au contact de la peau, ce qui est normal."] }
     ];
 
     /* =====================================================================
@@ -410,6 +475,10 @@
         const pos = [[90,70],[110,60],[130,72],[100,90],[122,92],[142,86],[80,95],[112,112],[134,108],[96,118],[150,104],[70,80]];
         pos.forEach(([x, y], i) => points += `<ellipse cx="${x}" cy="${y}" rx="7" ry="4" fill="#fbf4e6" transform="rotate(${i * 37} ${x} ${y})"/>`);
         return `<svg viewBox="0 0 220 170" width="220" height="170" aria-hidden="true"><path d="M60 60 Q110 20 160 60 L170 140 Q110 160 50 140z" fill="${p.couleur}"/>${points}</svg>`;
+      }
+      if (p.feuilles) {
+        const f = (x, y, a) => `<g transform="rotate(${a} ${x} ${y})"><path d="M${x} ${y-34} C ${x+16} ${y-18} ${x+16} ${y+14} ${x} ${y+34} C ${x-16} ${y+14} ${x-16} ${y-18} ${x} ${y-34} Z" fill="${p.couleur}"/><path d="M${x} ${y-28} V ${y+28}" stroke="#e2a93b" stroke-width="2"/></g>`;
+        return `<svg viewBox="0 0 220 170" width="220" height="170" aria-hidden="true"><path d="M30 140 Q110 110 190 140" stroke="#7a3b1d" stroke-width="5" fill="none" stroke-linecap="round"/>${f(70,92,-35)}${f(110,78,0)}${f(150,92,35)}${f(92,112,-70)}${f(128,112,70)}</svg>`;
       }
       if (p.fleur) {
         const petale = (a) => `<path d="M110 85 C 92 60 98 34 110 28 C 122 34 128 60 110 85 Z" fill="${p.couleur}" transform="rotate(${a} 110 85)"/>`;
@@ -446,6 +515,8 @@
           <h3>${p.nom}</h3>
           <span class="format">${p.format} · Préparé sur commande</span>
           <ul class="usages" aria-label="Usages">${p.usages.map(u => `<li>${u}</li>`).join("")}</ul>
+          ${p.courte ? `<p class="courte">${p.courte}</p>` : ""}
+          ${p.details ? `<details class="plus"><summary>En savoir plus</summary><ul>${p.details.map(d => `<li>${d}</li>`).join("")}</ul>${p.alerte ? `<p class="alerte">⚠ ${p.alerte}</p>` : ""}</details>` : ""}
           <div class="prix">${p.prix ? formatPrix(p.prix) : "Prix sur demande"}</div>
           <div class="commande">
             <div class="quantite">
@@ -477,6 +548,12 @@
     // Boutons WhatsApp généraux
     document.querySelectorAll(".js-wa-general").forEach(a => {
       a.href = lienWhatsApp("Bonjour Sahel d'Or, j'aimerais avoir des informations sur vos produits.");
+      a.target = "_blank";
+      a.rel = "noopener";
+    });
+
+    document.querySelectorAll(".js-wa-gros").forEach(a => {
+      a.href = lienWhatsApp("Bonjour Sahel d'Or, je souhaite un tarif de gros.\nProduits et quantités : \nMa ville : ");
       a.target = "_blank";
       a.rel = "noopener";
     });
